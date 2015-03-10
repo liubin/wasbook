@@ -1,13 +1,13 @@
 <?php
-  session_start();  // セッションの開始
+  session_start();  // 启动session
 ?>
 <html>
-<head><title>ログインしてください</title></head>
+<head><title>请登录</title></head>
 <body>
 <form action="31-021.php" method="POST">
-ユーザ名<input type="TEXT" name="ID"><BR>
-パスワード<input type="PASSWORD" name="PWD"><BR>
-<input type=SUBMIT value="ログイン">
+用户名<input type="TEXT" name="ID"><BR>
+密码<input type="PASSWORD" name="PWD"><BR>
+<input type=SUBMIT value="登录">
 </form>
 </body>
 </html>

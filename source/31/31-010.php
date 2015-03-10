@@ -5,12 +5,12 @@
   if (! $user || ! $pass) {
     header('HTTP/1.1 401 Unauthorized');
     header('WWW-Authenticate: Basic realm="Basic Authentication Sample"');
-    echo "ユーザ名とパスワードが必要です";
+    echo "请输入用户名和密码";
     exit;
   }
 ?>
 <body>
-認証しました<BR>
-ユーザ名:<?php echo htmlspecialchars($user, ENT_NOQUOTES, 'UTF-8'); ?><BR>
-パスワード:<?php echo htmlspecialchars($pass, ENT_NOQUOTES, 'UTF-8'); ?> <BR>
+登录成功<BR>
+用户名:<?php echo htmlspecialchars($user, ENT_NOQUOTES, 'UTF-8'); ?><BR>
+密码:<?php echo htmlspecialchars($pass, ENT_NOQUOTES, 'UTF-8'); ?> <BR>
 </body>

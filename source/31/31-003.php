@@ -4,15 +4,15 @@
   $gender = @$_POST['gender'];
 ?>
 <html>
-<head><title>確認</title></head>
+<head><title>确认</title></head>
 <body>
 <form action="31-004.php" method="POST">
-氏名:<?php echo htmlspecialchars($name, ENT_NOQUOTES, 'UTF-8'); ?><BR>
-メールアドレス:<?php echo htmlspecialchars($mail, ENT_NOQUOTES, 'UTF-8'); ?><BR>
+姓名:<?php echo htmlspecialchars($name, ENT_NOQUOTES, 'UTF-8'); ?><BR>
+邮件地址:<?php echo htmlspecialchars($mail, ENT_NOQUOTES, 'UTF-8'); ?><BR>
 性別:<?php echo htmlspecialchars($gender, ENT_NOQUOTES, 'UTF-8'); ?><BR>
 <input type="hidden" name="name" value="<?php echo htmlspecialchars($name, ENT_COMPAT, 'UTF-8'); ?>">
 <input type="hidden" name="mail" value="<?php echo htmlspecialchars($mail, ENT_COMPAT, 'UTF-8'); ?>">
 <input type="hidden" name="gender" value="<?php echo htmlspecialchars($gender, ENT_COMPAT, 'UTF-8'); ?>">
-<input type="submit" value="登録">
+<input type="submit" value="注册">
 </form>
 </html>
