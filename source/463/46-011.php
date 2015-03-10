@@ -6,7 +6,7 @@
 <html>
 <body>
 <?php echo htmlspecialchars($id, ENT_COMPAT, 'UTF-8'); ?>
-さん、ログイン成功です<BR>
-<a href="46-012.php">個人情報</a>
+さん、登录成功です<BR>
+<a href="46-012.php">个人信息</a>
 </body>
 </html>

@@ -8,7 +8,7 @@
 </head>
 <body>
 これはデモ用にそうしていますが、実際の攻撃では、こんな表示は出ません。<br>
-IDとパスワードを収集しました。<br>
+IDと密码を収集しました。<br>
 5秒後にhttp://example.jp/47/47-003.phpに遷移します。<br>
 id:<?php echo htmlspecialchars($id); ?><br>
 pwd:<?php echo htmlspecialchars($pwd); ?><br>

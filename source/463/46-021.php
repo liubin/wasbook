@@ -3,13 +3,13 @@
   $name = $_SESSION['name'] = $_POST['name'];
   $mail = $_SESSION['mail'] = $_POST['mail'];
 ?>
-<head><title>個人情報の確認</title></head>
+<head><title>确认个人信息</title></head>
 <body>
 <form action="46-022.php" method="POST">
-氏名:<?php echo htmlspecialchars($name, ENT_COMPAT, 'UTF-8'); ?><br>
-メール:<?php echo htmlspecialchars($mail, ENT_COMPAT, 'UTF-8'); ?><br>
-<input type="submit" value="登録"><br>
-<a href="46-020.php">戻る</a>
+姓名:<?php echo htmlspecialchars($name, ENT_COMPAT, 'UTF-8'); ?><br>
+邮件:<?php echo htmlspecialchars($mail, ENT_COMPAT, 'UTF-8'); ?><br>
+<input type="submit" value="注册"><br>
+<a href="46-020.php">返回</a>
 </form>
 </body>
 </html>

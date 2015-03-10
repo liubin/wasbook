@@ -26,16 +26,16 @@ function get_upload_file_name($tofile) {
 $tmpfile = $_FILES["imgfile"]["tmp_name"];
 $orgfile = $_FILES["imgfile"]["name"];
 if (! is_uploaded_file($tmpfile)) {
-  die('ファイルがアップロードされていません');
+  die('ファイルが上传されていません');
 }
 $tofile = get_upload_file_name($orgfile);
 if (! move_uploaded_file($tmpfile, $tofile)) {
-  die('ファイルをアップロードできません');
+  die('ファイルを上传できません');
 }
 $imgurl = '4c-013.php?file=' . basename($tofile);
 ?>
 <body>
 <a href="<?php echo htmlspecialchars($imgurl); ?>"><?php
  echo htmlspecialchars($orgfile, ENT_NOQUOTES, 'UTF-8'); ?>
-をアップロードしました</a><BR>
+を上传しました</a><BR>
 </body>

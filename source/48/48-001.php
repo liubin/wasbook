@@ -8,7 +8,7 @@ function getToken() {
 
   // ここまでで認証成功
   session_start();
-  session_regenerate_id(true); // セッションIDの再生成
+  session_regenerate_id(true); // Session IDの再生成
   $token = getToken(); // トークンの生成
   // トークンとcookieとセッションに保存
   setcookie('token', $token, 0, '', '', true, true);

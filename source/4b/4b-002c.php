@@ -11,11 +11,11 @@ Subject: =?UTF-8?B?5Y+X44GR5LuY44GR44G+44GX44Gf?=
 Content-Type: text/plain; charset="UTF-8"
 Content-Transfer-Encoding: 8bit
 
-お問い合わせを受け付けました
+您的反馈内容已经收到
 EndOfMail
 );
   pclose($h);
 ?>
 <body>
-お問い合わせを受け付けました
+您的反馈内容已经收到
 </body>

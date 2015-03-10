@@ -3,6 +3,6 @@
 ?>
 <html>
 <body>
-現在のユーザID:<?php echo  htmlspecialchars($_SESSION['id'], ENT_COMPAT, 'UTF-8'); ?><BR>
+現在の用户ID:<?php echo  htmlspecialchars($_SESSION['id'], ENT_COMPAT, 'UTF-8'); ?><BR>
 </body>
 </html>

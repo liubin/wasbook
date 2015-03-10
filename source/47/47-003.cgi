@@ -10,6 +10,6 @@ print encode('UTF-8', <<END);
 Content-Type: text/html; charset=UTF-8
 
 <body>
-ログインしました
+登录しました
 </body>
 END

@@ -1,10 +1,10 @@
 <?php
   $name = isset($_GET['name']) ? $_GET['name'] : '';
-  // 文字エンコーディング（Shift_JIS）のチェック
+  // 字符编码（Shift_JIS）のチェック
   if (! mb_check_encoding($name, 'Shift_JIS')) {
-    die('文字エンコーディングが不正です');
+    die('字符编码が不正です');
   }
- // 文字エンコーディングの変換（Shift_JIS→UTF-8）
+ // 字符编码の変換（Shift_JIS→UTF-8）
   $name = mb_convert_encoding($name, 'UTF-8', 'Shift_JIS');
 ?>
 <body>

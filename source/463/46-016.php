@@ -1,6 +1,6 @@
 <?php
   session_start();
-  // ユーザIDの確認
+  // 用户IDの确认
   $token = $_COOKIE['token'];
   if (! $token || $token != $_SESSION['token']) {
     die('認証エラー');

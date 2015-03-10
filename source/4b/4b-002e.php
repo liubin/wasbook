@@ -3,6 +3,6 @@
   system('/usr/sbin/sendmail <template.txt ' . escapeshellcmd($mail));
 ?>
 <body>
-お問い合わせを受け付けました
+您的反馈内容已经收到
 <?php echo htmlspecialchars('/usr/sbin/sendmail <template.txt ' . escapeshellcmd($mail)); ?>
 </body>

@@ -2,9 +2,9 @@
   $mail = $_POST['mail'];
   mb_language('Japanese');
   mb_send_mail($mail, "受け付けました",
-    "お問い合わせを受け付けました",
+    "您的反馈内容已经收到",
      "From: webmaster@example.jp");
 ?>
 <body>
-お問い合わせを受け付けました
+您的反馈内容已经收到
 </body>

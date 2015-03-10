@@ -8,6 +8,6 @@
      "From: " . $from);
 ?>
 <body>
-送信しました
+发送しました
 <?php //echo $from ?>
 </body>

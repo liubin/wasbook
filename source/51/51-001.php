@@ -6,7 +6,7 @@
 
   // ソルトを生成する
   function get_salt($id) {
-    return $id . pack('H*', FIXEDSALT);  // ユーザIDと固定文字列を連結
+    return $id . pack('H*', FIXEDSALT);  // 用户IDと固定文字列を連結
   }
 
   function get_password_hash($id, $pwd) {

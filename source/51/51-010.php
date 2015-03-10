@@ -3,6 +3,6 @@
   $_SESSION['id'] = 'yamada';
 ?>
 <body>
-ログインしました(id=yamada)<br>
+登录しました(id=yamada)<br>
 <a href="51-011.php">next</a>
 </body>
