@@ -1,0 +1,19 @@
+<html>
+<head><title>4.10 ファイルアクセスにまつわる問題</title></head>
+<body>
+4.10 ファイルアクセスにまつわる問題
+<ol>
+<li><a href="4a-001.php?template=spring">4a-001:ディレクトリ・トラバーサル（正常系）</a></li>
+<li><a href="4a-001.php?template=../../../../etc/hosts%00">4a-001:ディレクトリ・トラバーサル（/etc/hosts表示）</a></li>
+<li><a href="4a-001.php?template=../4a-001.php%00">4a-001:ディレクトリ・トラバーサル（スクリプト:ソース表示）</a></li>
+<li><a href="4a-001b.php?template=spring">4a-001b:ディレクトリ・トラバーサル対策(basename関数利用)（正常系）</a></li>
+<li><a href="4a-001b.php?template=../../../../etc/hosts%00">4a-001b:ディレクトリ・トラバーサル対策(basename関数利用)（正常系）（/etc/hosts表示…失敗）</a></li>
+<li><a href="4a-001c.php?template=spring">4a-001c:ディレクトリ・トラバーサル対策(ファイル名を英数字に限定)（正常系）</a></li>
+<li><a href="4a-001c.php?template=../../../../etc/hosts%00">4a-001c:ディレクトリ・トラバーサル対策(ファイル名を英数字に限定)（/etc/hosts表示…失敗）</a></li>
+<li><a href="./data/">4a/data/:意図しないファイル公開</li>
+</ol>
+<a href="phpinfo.php">phpinfo</a><br>
+<a href="/">ホームに戻る</a>
+</body>
+</html>
+

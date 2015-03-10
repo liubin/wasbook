@@ -1,0 +1,38 @@
+<html>
+<head><title>4.3 表示処理に伴う問題</title></head>
+<body>
+4.3 表示処理に伴う問題
+<ul>
+<li>クロスサイト・スクリプティング（基本編）</li>
+<ol>
+<li><a href="43-001.php?keyword=Haskell">43-001:正常系</a></li>
+<li><a href="43-900.html">43-900:罠サイト</a></li>
+<li><a href="43-002.php">43-002:粗大ゴミ申し込み(正常系)</a></li>
+<li><a href="43-902.html">43-902:粗大ゴミ悪用</a></li>
+<li><a href="43-003.php?p=alice@example.jp">43-003:引用符で囲まない属性値(正常系)</a></li>
+<li><a href="43-003.php?p=1+onmouseover%3dalert(document.cookie)">43-003:引用符で囲まない属性値(XSS)</a></li>
+<li><a href="43-004.php?p=alice@example.jp">43-004:引用符で囲った属性値(正常系)</a></li>
+<li><a href='43-004.php?p="+onmouseover%3d"alert(document.cookie)'>43-004:引用符で囲った属性値(XSS)</a></li>
+</ol>
+<li>クロスサイト・スクリプティング（発展編）</li>
+<ol start="9">
+<li><a href="43-010.php?url=http://www.hash-c.co.jp/">43-030:href属性の動的生成(正常系)</a></li>
+<li><a href="43-010.php?url=javascript:alert(document.cookie)">43-010:href属性の動的生成(XSS)</a></li>
+<li><a href="43-010a.php?url=javascript:alert(document.cookie)">43-010a:href属性の動的生成(対策済み)</a></li>
+<li><a href="43-011.html?name=Yamada">43-011:DOM Based XSS(正常系)</a></li>
+<li><a href="43-011.html?name=&lt;script>alert(document.cookie)&lt;/script>">43-011:DOM Based XSS(XSS)</a></li>
+<li><a href="43-011a.html?name=&lt;script>alert(document.cookie)&lt;/script>">43-011a:DOM Based XSS(対策済み)</a></li>
+<li><a href="43-012.php?name=Yamada">43-012:イベントハンドラの動的生成(正常系)</a></li>
+<li><a href="43-012.php?name=');alert(document.cookie)//">43-012:イベントハンドラの動的生成(XSS)</a></li>
+<li><a href="43-012a.php?name=');alert(document.cookie)//">43-012a:イベントハンドラの動的生成(対策済み)</a></li>
+<li><a href="43-013.php?name=Yamada">43-013:script要素内の動的生成(正常系)</a></li>
+<li><a href="43-013.php?name=&lt;/script>&lt;script>alert(document.cookie)//">43-013:script要素内の動的生成(XSS)</a></li>
+<li><a href="43-013a.php?name=&lt;/script>&lt;script>alert(document.cookie)//">43-013a:script要素内の動的生成(対策済みA)</a></li>
+<li><a href="43-013b.php?name=</script><script>alert(document.cookie)//">43-013b:script要素内の動的生成(対策済みB)</a></li>
+</ol>
+<br>
+<a href="phpinfo.php">phpinfo</a><br>
+<a href="/">ホームに戻る</a>
+</body>
+</html>
+

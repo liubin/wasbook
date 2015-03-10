@@ -1,0 +1,3 @@
+php_flag session.use_cookies On
+php_flag session.use_only_cookies Off
+php_flag session.use_trans_sid On

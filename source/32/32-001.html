@@ -1,0 +1,19 @@
+<html>
+<head><title>フレーム間の読み出し実験</title></head>
+<body>
+<iframe name="iframe1" width="300" height="80" src="http://example.jp/32/32-002.html">
+</iframe><br>
+<input type="button" onclick="go()" value="パスワード→">
+<script>
+function go() {
+ try {
+  var x = iframe1.document.form1.passwd.value;
+  document.getElementById('out').innerHTML = x;
+ } catch (e) {
+  alert(e.message);
+ }
+}
+</script>
+<span id="out"></span>
+</body>
+</html>

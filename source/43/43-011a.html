@@ -1,0 +1,12 @@
+<header>
+</header>
+<body>
+<script src="jquery-1.4.4.min.js"></script>
+こんにちは<span id="name"></span>さん
+<script type="text/javascript">
+if (document.URL.match(/name\=([^&]*)/)) {
+  var name = unescape(RegExp.$1);
+  $('#name').text(name);
+}
+</script>
+</body>

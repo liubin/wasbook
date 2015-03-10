@@ -1,0 +1,38 @@
+<html>
+<head><title>4.7 リダイレクト処理にまつわる脆弱性</title></head>
+<body>
+4.7 リダイレクト処理にまつわる脆弱性
+<ul>
+<li>オープンリダイレクタ</li>
+<ol>
+<li><a href="47-001.php?url=http://example.jp/47/47-003.php">47-001:正常系</a></li>
+<li><a href="47-001.php?url=http://trap.example.com/47/47-900.php">47-001:罠サイトに遷移</a></li>
+</ol>
+<li>HTTPヘッダインジェクション</li>
+<ol start="3">
+<li><a href="47-020.cgi?url=http://example.jp/47/47-003.php">47-020:CGIによるリダイレクト（正常系）</a></li>
+<li><a href="47-020.cgi?url=http://example.jp/%0D%0ALocation:+http://trap.example.com/47/47-900.php">47-020:CGIによるリダイレクト（罠サイトに遷移）</a></li>
+<li><a href="47-020.cgi?url=http://example.jp/47/47-003.php%0D%0ASet-Cookie:+SESSID=ABCD123">47-020:CGIによるリダイレクト（クッキー設定;SESSID=ABCD123）</a> <a href="javascript:document.cookie;">クッキー表示</a></li>
+
+<li><a href="47-021.cgi?pageid=P123">47-021:CGIによるクッキーセット（正常系）</a></li>
+<li><a href="47-021.cgi?pageid=P%0D%0A%0D%0A%e2%97%8b%e2%97%8b%e9%8a%80%e8%a1%8c%e3%81%af%e7%a0%b4%e7%94%a3%e3%81%97%e3%81%be%e3%81%97%e3%81%9f">47-021:CGIによるクッキーセット（偽画面）</a></li>
+
+
+<li><a href="47-020a.cgi?url=http://example.jp/47/47-003.php">47-020a:CGIによるリダイレクト対策版（正常系）</a></li>
+<li><a href="47-020a.cgi?url=http://example.jp/%0D%0ALocation:+http://trap.example.com/47/47-900.php?">47-020a:CGIによるリダイレクト対策版（罠サイトに遷移）</a></li>
+<li><a href="47-020a.cgi?url=http://example.jp/47/47-003.php%0D%0ASet-Cookie:+SESSID=ABCD123">47-020a:CGIによるリダイレクト対策版（クッキー設定）</a></li>
+
+
+<li><a href="47-021a.cgi?pageid=P123">47-021a:CGIによるクッキー対策版（正常系）</a></li>
+<li><a href="47-021a.cgi?pageid=P%0D%0A%0D%0A%e2%97%8b%e2%97%8b%e9%8a%80%e8%a1%8c%e3%81%af%e7%a0%b4%e7%94%a3%e3%81%97%e3%81%be%e3%81%97%e3%81%9f">47-021a:CGIによるクッキーセット対策版（偽画面）</a></li>
+
+<li><a href="47-030.php?url=http://example.jp/47/47-003.php">47-030:PHPによるリダイレクト対策版（正常系）</a></li>
+<li><a href="47-030.php?url=http://example.jp/47/47-003.php%0D%0ALocation:+http://trap.example.com/47/47-900.php">47-030:PHPによるリダイレクト対策版（罠サイトに遷移）</a></li>
+<li><a href="47-030.php?url=http://example.jp/47/47-003.php%0D%0A+Set-Cookie:+aaa=bbb">47-030:PHPによるリダイレクト対策版（クッキー設定）</a></li>
+</ol>
+</ul>
+<a href="phpinfo.php">phpinfo</a><br>
+<a href="/">ホームに戻る</a>
+</body>
+</html>
+

@@ -1,0 +1,27 @@
+<html>
+<head><title>4.6 セッション管理の不備</title></head>
+<body>
+4.6 セッション管理の不備
+<ol>
+<li><a href="/462/46-001.php">46-001:RefererからのセッションID漏洩</a></li>
+<li><a href="/463/46-010.php">46-010:セッションIDの固定化(正常系)</a></li>
+<li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-199
+9 23:59:59 GMT&quot;;''"">セッションクッキーの削除</a> → <a href="/463/46-010.php?PHPSESSID=ABC">46-010:セッションIDの固定化(攻撃)</a></li>
+<li><a href="/463/46-012.php?PHPSESSID=ABC">46-012:セッションIDの固定化(情報の盗み出し)</a></li>
+<li><a href="/463/46-020.php">46-020:ログイン前のセッションIDの固定化(正常系)</a></li>
+<li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-199
+9 23:59:59 GMT&quot;;''">セッションクッキーの削除</a> → <a href="/463/46-020.php?PHPSESSID=ABC">46-020:ログイン前のセッションIDの固定化(攻撃)</a></li>
+<li><a href="/463/46-020.php?PHPSESSID=ABC">46-020:ログイン前のセッションIDの固定化(情報の盗み出し。別ブラウザで確認すると分かりやすい)</a></li>
+<li><a href="/463/46-010a.php">46-010a:セッションIDの固定化対策版(正常系)</a></li>
+<li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-199
+9 23:59:59 GMT&quot;;''"">セッションクッキーの削除</a> → <a href="/463/46-010a.php?PHPSESSID=ABC">46-010a:セッションIDの固定化対策版(攻撃)</a></li>
+<li><a href="/463/46-015.php">46-015:セッションIDの固定化トークンによる対策版</a></li>
+<li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-1999 23:59:59 GMT&quot;;''">セッションクッキーの削除</a></li>
+<li><a href="javascript:document.cookie">クッキーの表示</a></li>
+</ol>
+<a href="/462/phpinfo.php">phpinfo(RefererからのセッションID漏洩)</a><br>
+<a href="/462/phpinfo.php">phpinfo(セッションIDの固定化)</a><br>
+<a href="/">ホームに戻る</a>
+</body>
+</html>
+
