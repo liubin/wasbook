@@ -1,6 +1,6 @@
 <html>
 <head><title>認証成功</title></head>
 <body>
-登录しました
+已经登录
 </body>
 </html>

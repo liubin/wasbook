@@ -10,7 +10,7 @@ print encode('UTF-8', <<END_OF_HTML);
 Content-Type: text/html; charset=UTF-8
 
 <body>
-こちらはSession ID収集サイト。Refererは以下の通り<BR>
+这是一个收集Session ID的网站。Referer为：<BR>
 $e_referer
 </body>
 END_OF_HTML

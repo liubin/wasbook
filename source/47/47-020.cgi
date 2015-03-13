@@ -6,12 +6,12 @@ use CGI qw/-no_xhtml :standard/;
 my $cgi = new CGI;
 my $url = $cgi->param('url');
 
-# URLの先頭一致検索でオープンリダイレクタ対策
+# URL符合条件时重定向
 if ($url =~ /^http:\/\/example\.jp\//) {
   print "Location: $url\n\n";
   exit 0;
 }
-## URLが不正の場合のエラーメッセージ
+## URL非法时的错误信息
 print <<END_OF_HTML;
 Content-Type: text/html; charset=UTF-8
 

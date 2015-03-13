@@ -3,11 +3,11 @@
   $body = $_POST['body'];
 
   mb_language('Japanese');
-  mb_send_mail("wasbook@example.jp", "問い合わせがありました",
-    "以下の問い合わせがありましたので対応お願いします\n\n" . $body,
+  mb_send_mail("wasbook@example.jp", "有新的联系",
+    "下面是新收到的用户联系内容，请处理\n\n" . $body,
      "From: " . $from);
 ?>
 <body>
-发送しました
+已经发送
 <?php //echo $from ?>
 </body>

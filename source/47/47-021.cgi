@@ -7,13 +7,13 @@ use Encode qw(encode decode);
 my $cgi = new CGI;
 my $pageid = decode('UTF-8', $cgi->param('pageid'));
 
-# encodeによりUTF-8符号化で出力する
+# 通过encode以UTF-8的形式输出
 print encode('UTF-8', <<END_OF_HTML);
 Content-Type: text/html; charset=UTF-8
 Set-Cookie: PAGEID=$pageid
 
 <body>
 <div></div>
-クッキー値をセットしました
+cookie设置成功
 </body>
 END_OF_HTML

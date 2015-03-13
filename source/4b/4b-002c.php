@@ -2,7 +2,7 @@
   $mail = $_POST['mail'];
   $h = popen('/usr/sbin/sendmail -t -i', 'w');
   if ($h === FALSE) {
-    die('ただいま混み合っております。しばらくたってから..');
+    die('服务器忙，请稍后');
   }
   fwrite($h, <<<EndOfMail
 To: $mail

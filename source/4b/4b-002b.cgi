@@ -7,10 +7,10 @@ use Encode;
 my $q = new CGI;
 my $mail = $q->param('mail');
 
-# シェルを経由せずにsendmailコマンドをパイプとしてオープンする
+# 不经过shell，而是以管道的方式调用sendmail
 open my $pipe, '|-', '/usr/sbin/sendmail', $mail or die $!;
 
-# メール内容の流し込み
+# 填充邮件内容
 print $pipe encode('UTF-8', <<EndOfMail);
 To: $mail
 From: webmaster\@example.jp
@@ -23,7 +23,7 @@ EndOfMail
 
 close $pipe;
 
-# 以下は画面表示
+# 下面用于在页面显示
 print encode('UTF-8', <<EndOfHTML);
 Content-Type: text/html; charset=UTF-8
 

@@ -1,4 +1,4 @@
 <body>
-外部のサイトにリンクしようとしています
-<a href="http://trap.example.com/74/74-900.php">外部のページ</a><br>
+指向外部网站的链接。
+<a href="http://trap.example.com/74/74-900.php">外部链接</a><br>
 </body>

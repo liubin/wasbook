@@ -4,5 +4,5 @@
 ?>
 <body>
 <?php readfile(TMPLDIR . $tmpl . '.html'); ?>
-メニュー（以下略）
+菜单（以下省略）
 </body>

@@ -9,7 +9,7 @@ my $id = decode('utf-8', $cgi->param('ID'));
 my $pwd = decode('utf-8', $cgi->param('PWD'));
 my $url = decode('utf-8', $cgi->param('URL'));
 
-# 登录はIDと密码が入力されていれば成功する
+# 输入ID和密码即认为登录成功
 if ($id ne '' && $pwd ne '') {
   print encode('UTF-8', "Location: $url\n\n");
   ##print $cgi->redirect($url);
@@ -20,7 +20,7 @@ print encode('UTF-8', <<END_OF_HTML);
 Content-Type: text/html; charset=UTF-8
 
 <body>
-IDまたは密码が違います
-<a href="47-020.cgi">再登录</a>
+ID和密码不匹配
+<a href="47-020.cgi">重新登录</a>
 </body>
 END_OF_HTML

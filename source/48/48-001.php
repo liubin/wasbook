@@ -1,16 +1,16 @@
 <?php
-// /dev/urandomによる疑似乱数生成器
+// 采用/dev/urandom创建模拟随机数
 function getToken() {
-  // /dev/urandomから24バイト読み込み
+  // 从/dev/urandom读取24个字节
   $s = file_get_contents('/dev/urandom', false, NULL, 0, 24);
-  return base64_encode($s); // base64エンコードして返す
+  return base64_encode($s); // base64编码后返回
 }
 
-  // ここまでで認証成功
+  // 到这里已经认证成功
   session_start();
-  session_regenerate_id(true); // Session IDの再生成
-  $token = getToken(); // トークンの生成
-  // トークンとcookieとセッションに保存
+  session_regenerate_id(true); // 重新生成Session ID
+  $token = getToken(); // 生成token
+  // 将token保存到cookie和session
   setcookie('token', $token, 0, '', '', true, true);
   $_SESSION['token'] = $token;
 ?>

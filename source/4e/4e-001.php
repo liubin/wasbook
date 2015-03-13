@@ -6,6 +6,6 @@
 <body>
 <form action="4e-002.php" method="GET">
 <input type="hidden" name="data" value="<?php echo htmlspecialchars($b64) ?>">
-<input type="submit" value="次へ">
+<input type="submit" value="下一步">
 </form>
 </body>

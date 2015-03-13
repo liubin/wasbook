@@ -1,9 +1,9 @@
 <?php
   session_start();
-  // 用户IDの确认
+  // 确认用户ID
   $token = $_COOKIE['token'];
   if (! $token || $token != $_SESSION['token']) {
-    die('認証エラー。トークンが不正です。');
+    die('认证错误。token不正确');
   }
 ?>
-<body> トークンをチェックし、認証状態を确认しました </body>
+<body> 通过检查token来进行认证状态确认。 </body>

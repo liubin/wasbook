@@ -6,7 +6,7 @@
   $id = $_SESSION['id']; // 取出用户ID
   // 登录确认…省略
   $pwd = $_POST['pwd'];   // 取得密码
-  // 修改稿密码，将用户$id的密码设为$pwd 
+  // 修改密码，将用户$id的密码设为$pwd 
 ?>
 <body>
 <?php ex($id); ?> 的密码已经修改为 <?php ex($pwd); ?>

@@ -2,15 +2,15 @@
   $id = isset($_POST['id']) ? $_POST['id'] : '';
   $pwd = isset($_POST['pwd']) ? $_POST['pwd'] : '';
   $url = isset($_POST['url']) ? $_POST['url'] : '';
-  // 登录はIDと密码が入力されていれば成功する
+  // 输入ID和密码即认为登录成功
   if ($id != '' && $pwd != '') {
-    // 指定したURLにリダイレクト
+    // 重定向到指定的URL
     header('Location: ' . $url);
     exit();
 }
-// 以下は登录失敗の場合
+// 下面为登录失败
 ?>
 <body>
-IDまたは密码が違います
-<a href="47-001.php">再登录</a>
+ID和密码不匹配
+<a href="47-001.php">重新登录</a>
 </body>
