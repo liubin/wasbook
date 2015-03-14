@@ -6,5 +6,5 @@ function init(name) {
 }
 </script></head>
 <body onload="init('<?php echo htmlspecialchars($_GET['name'], ENT_QUOTES) ?>')">
-こんにちは<span id="name"></span>さん
+你好<span id="name"></span>
 </body>

@@ -1,8 +1,8 @@
 <?php
   session_start();
-  // 登录チェック（略）
+  // 登录检查（略）
 ?>
 <body>
-検索キーワード:<?php echo $_GET['keyword']; ?><BR>
+搜索关键字:<?php echo $_GET['keyword']; ?><BR>
 以下略
 </body>

@@ -10,9 +10,9 @@ function check_url($url) {
 }
 $url = $_GET['url'];
 if (! check_url($url)) {
-  die('URLの形式が不正です');
+  die('URL格式不对');
 }
 ?>
 <body>
-<a href="<?php echo htmlspecialchars($url); ?>">ブックマーク</a>
+<a href="<?php echo htmlspecialchars($url); ?>">收藏夹</a>
 </body>

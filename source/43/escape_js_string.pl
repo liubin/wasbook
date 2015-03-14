@@ -3,19 +3,19 @@ use strict;
 use utf8;
 use Encode qw(decode encode);
 # ...
-# 入力をすべて\uXXXX形式でエスケープする
+# 将字符串转换为\uXXXX的形式进行转义
 sub unicode_escape {
-  my $u16 = encode('UTF-16BE', $_[0]);  # UTF-16に変換
-  my $hex = unpack('H*', $u16);          # 16進数文字列に変換
-# 以下、4文字ずつ切り出して、それぞれの先頭に\uをつけたものを連結する
+  my $u16 = encode('UTF-16BE', $_[0]);  # 转换为UTF-16
+  my $hex = unpack('H*', $u16);          # 转换为16进制的字符串
+# 每4个字符切分，在头部加上\u后连成一个字符串
   $hex =~ s/([0-9a-f]{4})/\\u\1/g;
   return $hex;
 }
 
-# 英数字以外を\uXXXX形式でエスケープする
+# // 英文字母以为的字符转换为\uXXXX的而形式进行转义
 sub escape_js_string {
   my ($s) = @_;
-# 英数字以外の文字列をunicode_escape関数に渡して変換する
+# 英文数字以外的字符串用unicode_escape进行转换
   $s =~ s/([^0-9a-zA-Z]+)/unicode_escape($1)/eg;
   return $s;
 }
