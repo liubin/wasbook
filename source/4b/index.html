@@ -1,23 +1,23 @@
 <html>
-<head><title>4.11 OSコマンド呼び出しの際に発生する脆弱性</title></head>
+<head><title>4-11 调用 OS命令引起的安全隐患</title></head>
 <body>
-4.11 OSコマンド呼び出しの際に発生する脆弱性
+4-11 调用 OS命令引起的安全隐患
 <ol>
-<li><a href="4b-001.html">4b-001:联系我们form(OSコマンドインジェクション)</a></li>
-<li><a href="4b-001x.html">4b-001:联系我们form(OSコマンドインジェクション)(攻撃)</a></li>
-<li><a href="4b-001a.html">4b-001a:联系我们form(OSコマンドを呼ばない)</a></li>
-<li><a href="4b-001ax.html">4b-001a:联系我们form(OSコマンドを呼ばない)(攻撃)</a></li>
-<li><a href="4b-001b.html">4b-001b:联系我们form(シェルを経由しない)</a></li>
-<li><a href="4b-001bx.html">4b-001b:联系我们form(シェルを経由しない)(攻撃)</a></li>
-<li><a href="4b-001c.html">4b-001c:联系我们form(コマンドラインにパラメータを渡さない)</a></li>
-<li><a href="4b-001cx.html">4b-001c:联系我们form(コマンドラインにパラメータを渡さない)(攻撃)</a></li>
-<li><a href="4b-001d.html">4b-001d:联系我们form(パラメータをエスケープ)</a></li>
-<li><a href="4b-001dx.html">4b-001d:联系我们form(パラメータをエスケープ)(攻撃)</a></li>
-<li><a href="4b-003.cgi">4b-003:Perlのopen文によるpwdコマンド呼び出し</a></li>
-<li><a href="4b-004.cgi?file=spring.txt">4b-004:Perlのopen文によるOSコマンドインジェクション（正常系）</a></li>
-<li><a href="4b-004.cgi?file=ls+/sbin|">4b-004:Perlのopen文によるOSコマンドインジェクション（ls /sbin）</a></li>
-<li><a href="4b-005.cgi?file=spring.txt">4b-004:Perlのopen文によるOSコマンドインジェクション対策版（正常系）</a></li>
-<li><a href="4b-005.cgi?file=ls+/sbin|">4b-004:Perlのopen文によるOSコマンドインジェクション対策版（ls /sbin）</a></li>
+<li><a href="4b-001.html">4b-001:联系我们form(命令注入)</a></li>
+<li><a href="4b-001x.html">4b-001:联系我们form(命令注入)(攻击)</a></li>
+<li><a href="4b-001a.html">4b-001a:联系我们form(不调用OS命令)</a></li>
+<li><a href="4b-001ax.html">4b-001a:联系我们form(不调用OS命令)(攻击)</a></li>
+<li><a href="4b-001b.html">4b-001b:联系我们form(不通过shell)</a></li>
+<li><a href="4b-001bx.html">4b-001b:联系我们form(不通过shell)(攻击)</a></li>
+<li><a href="4b-001c.html">4b-001c:联系我们form(不向命令行传递参数)</a></li>
+<li><a href="4b-001cx.html">4b-001c:联系我们form(不向命令行传递参数)(攻击)</a></li>
+<li><a href="4b-001d.html">4b-001d:联系我们form(对参数进行过滤/转义)</a></li>
+<li><a href="4b-001dx.html">4b-001d:联系我们form(对参数进行过滤/转义)(攻击)</a></li>
+<li><a href="4b-003.cgi">4b-003:利用Perl的open语句调用pwd命令</a></li>
+<li><a href="4b-004.cgi?file=spring.txt">4b-004:利用Perl的open语句命令注入（正常情况）</a></li>
+<li><a href="4b-004.cgi?file=ls+/sbin|">4b-004:利用Perl的open语句命令注入（ls /sbin）</a></li>
+<li><a href="4b-005.cgi?file=spring.txt">4b-004:利用Perl的open语句命令注入対策版（正常情况）</a></li>
+<li><a href="4b-005.cgi?file=ls+/sbin|">4b-004:利用Perl的open语句命令注入対策版（ls /sbin）</a></li>
 </ol>
 <a href="phpinfo.php">phpinfo</a><br>
 <a href="/">返回首页</a>

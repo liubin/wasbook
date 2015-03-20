@@ -1,26 +1,26 @@
 <html>
-<head><title>4.6 セッション管理の不備</title></head>
+<head><title>4-6 不完善的会话管理</title></head>
 <body>
-4.6 セッション管理の不備
+4-6 不完善的会话管理
 <ol>
-<li><a href="/462/46-001.php">46-001:RefererからのSession ID漏洩</a></li>
-<li><a href="/463/46-010.php">46-010:Session IDの固定化(正常系)</a></li>
+<li><a href="/462/46-001.php">46-001:从Referer泄露Session ID</a></li>
+<li><a href="/463/46-010.php">46-010:Session ID固定化(正常情况)</a></li>
 <li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-199
-9 23:59:59 GMT&quot;;''"">セッションクッキーの削除</a> → <a href="/463/46-010.php?PHPSESSID=ABC">46-010:Session IDの固定化(攻撃)</a></li>
-<li><a href="/463/46-012.php?PHPSESSID=ABC">46-012:Session IDの固定化(情報の盗み出し)</a></li>
-<li><a href="/463/46-020.php">46-020:登录前のSession IDの固定化(正常系)</a></li>
+9 23:59:59 GMT&quot;;''"">删除session cookie</a> → <a href="/463/46-010.php?PHPSESSID=ABC">46-010:Session ID固定化(攻击)</a></li>
+<li><a href="/463/46-012.php?PHPSESSID=ABC">46-012:Session ID固定化(盗取信息)</a></li>
+<li><a href="/463/46-020.php">46-020:登录前的Session ID固定化(正常情况)</a></li>
 <li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-199
-9 23:59:59 GMT&quot;;''">セッションクッキーの削除</a> → <a href="/463/46-020.php?PHPSESSID=ABC">46-020:登录前のSession IDの固定化(攻撃)</a></li>
-<li><a href="/463/46-020.php?PHPSESSID=ABC">46-020:登录前のSession IDの固定化(情報の盗み出し。別ブラウザで确认すると分かりやすい)</a></li>
-<li><a href="/463/46-010a.php">46-010a:Session IDの固定化対策版(正常系)</a></li>
+9 23:59:59 GMT&quot;;''">删除session cookie</a> → <a href="/463/46-020.php?PHPSESSID=ABC">46-020:登录前的Session ID固定化(攻击)</a></li>
+<li><a href="/463/46-020.php?PHPSESSID=ABC">46-020:登录前的Session ID固定化(盗取信息。在另外的浏览器中可以简单确认)</a></li>
+<li><a href="/463/46-010a.php">46-010a:Session ID固定化対策版(正常情况)</a></li>
 <li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-199
-9 23:59:59 GMT&quot;;''"">セッションクッキーの削除</a> → <a href="/463/46-010a.php?PHPSESSID=ABC">46-010a:Session IDの固定化対策版(攻撃)</a></li>
-<li><a href="/463/46-015.php">46-015:Session IDの固定化トークンによる対策版</a></li>
-<li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-1999 23:59:59 GMT&quot;;''">セッションクッキーの削除</a></li>
-<li><a href="javascript:document.cookie">クッキーの表示</a></li>
+9 23:59:59 GMT&quot;;''"">删除session cookie</a> → <a href="/463/46-010a.php?PHPSESSID=ABC">46-010a:Session ID固定化対策版(攻击)</a></li>
+<li><a href="/463/46-015.php">46-015:Session ID固定化 基于token的对策</a></li>
+<li><a href="javascript:document.cookie=&quot;PHPSESSID=ABC;path=/;expires=Fri, 31-Dec-1999 23:59:59 GMT&quot;;''">删除session cookie</a></li>
+<li><a href="javascript:document.cookie">显示Cookie信息</a></li>
 </ol>
-<a href="/462/phpinfo.php">phpinfo(RefererからのSession ID漏洩)</a><br>
-<a href="/462/phpinfo.php">phpinfo(Session IDの固定化)</a><br>
+<a href="/462/phpinfo.php">phpinfo(从Referer泄露Session ID)</a><br>
+<a href="/462/phpinfo.php">phpinfo(Session ID固定化)</a><br>
 <a href="/">返回首页</a>
 </body>
 </html>

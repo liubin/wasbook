@@ -1,34 +1,34 @@
 <html>
-<head><title>4.3 表示処理に伴う問題</title></head>
+<head><title>4-3 页面显示的相关问题</title></head>
 <body>
-4.3 表示処理に伴う問題
+4-3 页面显示的相关问题
 <ul>
-<li>クロスサイト・スクリプティング（基本編）</li>
+<li>跨站脚本（基本編）</li>
 <ol>
-<li><a href="43-001.php?keyword=Haskell">43-001:正常系</a></li>
-<li><a href="43-900.html">43-900:罠サイト</a></li>
-<li><a href="43-002.php">43-002:粗大ゴミ申し込み(正常系)</a></li>
-<li><a href="43-902.html">43-902:粗大ゴミ悪用</a></li>
-<li><a href="43-003.php?p=alice@example.jp">43-003:引用符で囲まない属性値(正常系)</a></li>
-<li><a href="43-003.php?p=1+onmouseover%3dalert(document.cookie)">43-003:引用符で囲まない属性値(XSS)</a></li>
-<li><a href="43-004.php?p=alice@example.jp">43-004:引用符で囲った属性値(正常系)</a></li>
-<li><a href='43-004.php?p="+onmouseover%3d"alert(document.cookie)'>43-004:引用符で囲った属性値(XSS)</a></li>
+<li><a href="43-001.php?keyword=Haskell">43-001:正常情况</a></li>
+<li><a href="43-900.html">43-900:陷阱网站</a></li>
+<li><a href="43-002.php">43-002:大型垃圾收集申请(正常情况)</a></li>
+<li><a href="43-902.html">43-902:恶意利用大型垃圾</a></li>
+<li><a href="43-003.php?p=alice@example.jp">43-003:没有用引号括起来属性値(正常情况)</a></li>
+<li><a href="43-003.php?p=1+onmouseover%3dalert(document.cookie)">43-003:没有用引号括起来属性値(XSS)</a></li>
+<li><a href="43-004.php?p=alice@example.jp">43-004:用引号括起来的属性値(正常情况)</a></li>
+<li><a href='43-004.php?p="+onmouseover%3d"alert(document.cookie)'>43-004:用引号括起来的属性値(XSS)</a></li>
 </ol>
-<li>クロスサイト・スクリプティング（発展編）</li>
+<li>跨站脚本（进阶篇）</li>
 <ol start="9">
-<li><a href="43-010.php?url=http://www.hash-c.co.jp/">43-030:href属性の動的生成(正常系)</a></li>
-<li><a href="43-010.php?url=javascript:alert(document.cookie)">43-010:href属性の動的生成(XSS)</a></li>
-<li><a href="43-010a.php?url=javascript:alert(document.cookie)">43-010a:href属性の動的生成(対策済み)</a></li>
-<li><a href="43-011.html?name=Yamada">43-011:DOM Based XSS(正常系)</a></li>
+<li><a href="43-010.php?url=http://www.hash-c.co.jp/">43-030:动态创建href属性(正常情况)</a></li>
+<li><a href="43-010.php?url=javascript:alert(document.cookie)">43-010:动态创建href属性(XSS)</a></li>
+<li><a href="43-010a.php?url=javascript:alert(document.cookie)">43-010a:动态创建href属性(已采取对策)</a></li>
+<li><a href="43-011.html?name=Yamada">43-011:DOM Based XSS(正常情况)</a></li>
 <li><a href="43-011.html?name=&lt;script>alert(document.cookie)&lt;/script>">43-011:DOM Based XSS(XSS)</a></li>
-<li><a href="43-011a.html?name=&lt;script>alert(document.cookie)&lt;/script>">43-011a:DOM Based XSS(対策済み)</a></li>
-<li><a href="43-012.php?name=Yamada">43-012:イベントハンドラの動的生成(正常系)</a></li>
-<li><a href="43-012.php?name=');alert(document.cookie)//">43-012:イベントハンドラの動的生成(XSS)</a></li>
-<li><a href="43-012a.php?name=');alert(document.cookie)//">43-012a:イベントハンドラの動的生成(対策済み)</a></li>
-<li><a href="43-013.php?name=Yamada">43-013:script要素内の動的生成(正常系)</a></li>
-<li><a href="43-013.php?name=&lt;/script>&lt;script>alert(document.cookie)//">43-013:script要素内の動的生成(XSS)</a></li>
-<li><a href="43-013a.php?name=&lt;/script>&lt;script>alert(document.cookie)//">43-013a:script要素内の動的生成(対策済みA)</a></li>
-<li><a href="43-013b.php?name=</script><script>alert(document.cookie)//">43-013b:script要素内の動的生成(対策済みB)</a></li>
+<li><a href="43-011a.html?name=&lt;script>alert(document.cookie)&lt;/script>">43-011a:DOM Based XSS(已采取对策)</a></li>
+<li><a href="43-012.php?name=Yamada">43-012:动态创建event handler(正常情况)</a></li>
+<li><a href="43-012.php?name=');alert(document.cookie)//">43-012:动态创建event handler(XSS)</a></li>
+<li><a href="43-012a.php?name=');alert(document.cookie)//">43-012a:动态创建event handler(已采取对策)</a></li>
+<li><a href="43-013.php?name=Yamada">43-013:在script元素中动态创建(正常情况)</a></li>
+<li><a href="43-013.php?name=&lt;/script>&lt;script>alert(document.cookie)//">43-013:在script元素中动态创建(XSS)</a></li>
+<li><a href="43-013a.php?name=&lt;/script>&lt;script>alert(document.cookie)//">43-013a:在script元素中动态创建(已采取对策A)</a></li>
+<li><a href="43-013b.php?name=</script><script>alert(document.cookie)//">43-013b:在script元素中动态创建(已采取对策B)</a></li>
 </ol>
 <br>
 <a href="phpinfo.php">phpinfo</a><br>
