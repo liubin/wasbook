@@ -1,5 +1,5 @@
 <html>
-<head><title>个人信息入力</title></head>
+<head><title>输入个人信息</title></head>
 <body>
 <form action="31-003.php" method="POST">
 姓名<input type="text" name="name"><BR>
